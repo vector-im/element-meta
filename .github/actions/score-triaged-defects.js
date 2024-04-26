@@ -209,7 +209,9 @@ async function setNewScore(scoreItem, projectFieldId, fieldValue) {
             if (scoreItem.score == null || scoreItem.score.number != computedScore) {
                 console.log(issue.number + " - " + " Updating score from " + (scoreItem.score ? scoreItem.score.number : "null") + " to " + computedScore + " - " + issue.title);
 
-                setNewScore(scoreItem, projectFieldId, computedScore);
+                setNewScore(scoreItem, projectFieldId, computedScore).catch(error => {
+                    console.error("   Error updating score: " + error);
+                });
             }
         });
 
