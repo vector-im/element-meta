@@ -210,7 +210,7 @@ async function setNewScore(scoreItem, projectFieldId, fieldValue) {
                 console.log(issue.number + " - " + " Updating score from " + (scoreItem.score ? scoreItem.score.number : "null") + " to " + computedScore + " - " + issue.title);
 
                 setNewScore(scoreItem, projectFieldId, computedScore).catch(error => {
-                    console.error("   Error updating score: " + error);
+                    console.error("Error updating score for issue " + issue.number + ": " + error);
                 });
             }
         });
