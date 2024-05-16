@@ -6,8 +6,9 @@
 
 This document aims to describe product requirements for key backup and recovery and its user-facing components in EX/EW.
 
-- **Key backup** refers to the server-side encryption key backup. Devices can upload encrypted copies of their megolm keys (room history decryption keys) to the server.
+- **Key backup** refers to the server-side encryption key backup. Devices can upload encrypted copies of their megolm keys (room history decryption keys) to the server. This is not exposed individually to users.
 - **Recovery** refers to secret storage (4S) that allows the user to securely store a remote encrypted backup of their devices' local secrets to their homeserver. The recovery restores the key backup secret as well as the cross-signing secrets.
+- **Chat backup** refers to key backup and recovery (4S) in a combined fashion. This is exposed to users in a way that they can backup their message history to the server (secret storage / 4S is implicit). Users can opt-out of it.
 
 **Table of contents**
 
