@@ -16,11 +16,11 @@ limitations under the License.
 
 
 // For running in an action
-const { Octokit } = require("@octokit/action");
+import { Octokit } from "@octokit/action";
 const octokit = new Octokit();
 
 // For running locally
-// const { Octokit } = require("@octokit/core");
+// import { Octokit } from "@octokit/core";
 // const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 
