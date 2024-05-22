@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install @octokit/action
-      - run: node .github/actions/score-triaged-defects.js
+      - run: node .github/actions/score-triaged-defects.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN }}
           REPO_OWNER: element-hq
@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install @octokit/action
-      - run: node .github/actions/score-triaged-defects.js
+      - run: node .github/actions/score-triaged-defects.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN }}
           REPO_OWNER: element-hq
@@ -49,7 +49,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install @octokit/action
-      - run: node .github/actions/score-triaged-defects.js
+      - run: node .github/actions/score-triaged-defects.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN }}
           REPO_OWNER: element-hq

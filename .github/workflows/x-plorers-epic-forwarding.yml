@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install @octokit/action
-      - run: node .github/actions/forward-project-field.js
+      - run: node .github/actions/forward-project-field.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN }}
           REPO_OWNER: ${{ github.event.repository.owner.login }}
