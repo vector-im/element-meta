@@ -40,8 +40,13 @@ async function main() {
     process.chdir(opts.dir);
   }
   
-  const merged = await readAndMergeLabels(opts.labels, accessToken);
-  await syncLabels(merged, repo, accessToken, opts.delete, opts.wet);
+  try {
+      const merged = await readAndMergeLabels(opts.labels, accessToken);
+      await syncLabels(merged, repo, accessToken, opts.delete, opts.wet);
+  } catch (e) {
+      console.error("Error syncing labels", e);
+      process.exit(1);
+  }
 }
 
 async function readAndMergeLabels(srcs: string[], accessToken: string): Promise<Map<string, LabelInfo>> {
