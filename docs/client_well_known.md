@@ -7,6 +7,13 @@
 <hr />
 
 
+## Matrix VoIP Configuration
+
+Matrix (1:1) VoIP configuration is keyed by `io.element.voip`. The following options are supported:
+
+| Key | Type | 🤖 | 🍎 | 🕸️ | Description |
+| - | - | - | - | - | - |
+| `disable_fallback_ice` | `Bool` | ✅ | ✅ | ✅ | Disable fallback ICE server, e.g. matrix.org, will require functioning TURN/STUN server to be configured. |
 
 ## Jitsi Configuration
 
@@ -14,8 +21,8 @@ Jitsi configuration is keyed by `io.element.jitsi`. The following options are su
 
 | Key | Type | 🤖 | 🍎 | 🕸️ | Description |
 | - | - | - | - | - | - |
-| `preferredDomain` | `String` | ✅ | ✅ | ❌ | Use the specified server for Jitsi calls. |
-| `useFor1To1Calls` | `Bool` | ❌ | ✅ | ❌ | Use Jitsi for 1:1 calls (by default we use native Matrix calls). |
+| `preferredDomain` | `String` | ✅ | ✅ | ✅ | Use the specified server for Jitsi calls. |
+| `useFor1To1Calls` | `Bool` | ❌ | ✅ | ✅ | Use Jitsi for 1:1 calls (by default we use native Matrix calls). |
 
 ## Encryption Configuration
 
