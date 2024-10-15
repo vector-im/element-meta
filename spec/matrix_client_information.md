@@ -31,6 +31,8 @@ All properties are strings. `url` property is optional.
 
 ## Client advisory
 
+Storage of client information should be opt-in.
+
 When starting the client after login or update:
 1. Upsert an account data event with the type `io.element.matrix_client_information.<device_id>` for the current device
 
@@ -45,7 +47,9 @@ Pruning of events depends on implementation of [MSC3391: Removing account
 data](https://github.com/matrix-org/matrix-spec-proposals/pull/3391)
 
 ## Security considerations
-N/A
+Storage of client information in account_data exposes information about user sessions to server administrators.
+The goal of the feature is to make session management easier, particularly identification of suspicious sessions.
+For this reason client information events will not use secret storage.
 
 ## Implementations
 
